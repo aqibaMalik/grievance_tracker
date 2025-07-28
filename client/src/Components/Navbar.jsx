@@ -1,9 +1,10 @@
 import React from "react"
+import { Outlet } from "react-router-dom"
 
 function Navbar() {
   return (
     <div>
-      <header className="flex flex-col md:flex-row justify-between p-5 border-b-2 border-gray-100">
+      <header className="flex  flex-col md:flex-row justify-between p-5 border-b-2 border-gray-100">
         <h1 className="text-2xl font-bold">JK Grievance Tracker</h1>
         <nav>
           <ul className="flex items-center gap-3 font-lg">
@@ -22,6 +23,7 @@ function Navbar() {
           </ul>
         </nav>
       </header>
+      <Outlet />
     </div>
   )
 }
