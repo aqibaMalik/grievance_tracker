@@ -5,7 +5,7 @@ function GrievanceBoard() {
 
   async function fetchGrievances() {
     try {
-      const res = await fetch("http://localhost:3000")
+      const res = await fetch(process.env.REACT_APP_API_URL)
       const data = await res.json()
       return data
     } catch (err) {

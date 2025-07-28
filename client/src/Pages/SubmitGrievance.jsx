@@ -22,13 +22,16 @@ function SubmitGrievance() {
       desc: form.current.desc?.value,
     }
     try {
-      const res = await fetch("http://localhost:3000/submitGrievance", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(reqBody),
-      })
+      const res = await fetch(
+        `${process.env.REACT_APP_API_URL}/submitGrievance`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(reqBody),
+        }
+      )
       const data = await res.json()
       showStatus("success")
     } catch (err) {
