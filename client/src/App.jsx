@@ -1,10 +1,13 @@
 import React from "react"
 import { Outlet } from "react-router-dom"
 import GrievanceBoard from "./Components/GrievanceBoard"
+import Navbar from "./Components/Navbar.jsx"
+import Footer from "./Components/Footer.jsx"
 
 function App() {
   return (
     <div className="ms-2">
+      <Navbar />
       <main className="flex flex-col md:flex-row justify-center gap-5 py-12 border-b-2 border-gray-100">
         <div className="w-80 h-50  md:w-100 md:h-80">
           <img className=" object-cover" src="/bell.png" alt="bell" />
@@ -61,6 +64,7 @@ function App() {
           </div>
         </div>
       </div>
+      <Footer />
       <Outlet />
     </div>
   )
