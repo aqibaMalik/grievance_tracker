@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react"
-
 function GrievanceBoard() {
   const [grievances, setGrievances] = useState([])
-
+  const ENDPOINT = import.meta.env.VITE_API_URL
+  console.log(ENDPOINT)
   async function fetchGrievances() {
     try {
-      const res = await fetch(process.env.REACT_APP_API_URL)
+      const res = await fetch(ENDPOINT)
       const data = await res.json()
       return data
     } catch (err) {

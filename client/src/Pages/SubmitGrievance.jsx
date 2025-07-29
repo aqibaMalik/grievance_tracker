@@ -25,7 +25,7 @@ function SubmitGrievance() {
     }
     try {
       const res = await fetch(
-        `${process.env.REACT_APP_API_URL}/submitGrievance`,
+        `${import.meta.env.VITE_API_URL}/submitGrievance`,
         {
           method: "POST",
           headers: {
@@ -60,7 +60,6 @@ function SubmitGrievance() {
           ref={form}
           onSubmit={handleGrievanceSubmit}
           method="POST"
-          action="http://localhost:3000"
           className="w-[300px] md:w-[500px] flex flex-col gap-3 "
         >
           <div>
