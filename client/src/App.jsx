@@ -6,60 +6,56 @@ import Footer from "./Components/Footer.jsx"
 
 function App() {
   return (
-    <div className="ms-2">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <Navbar />
-      <main className="flex flex-col md:flex-row justify-center gap-5 py-12 border-b-2 border-gray-100">
-        <div className="w-80 h-50  md:w-100 md:h-80">
-          <img className=" object-cover" src="/bell.png" alt="bell" />
-        </div>
-        <div className="mt-[30px] ">
-          <h2 className="md:max-w-[500px] text-2xl md:text-6xl font-bold md:leading-[70px]">
-            Speak Up for Fair Exams and Recruitment
+      <main className="flex flex-col md:flex-row items-center justify-center gap-12 py-16 border-b border-white/10">
+
+        <div className="flex flex-col items-start text-left max-w-xl">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-white">
+            Speak Up for <span className="text-blue-500 bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">Fair Exams</span> and Recruitment
           </h2>
-          <p className="text-muted text-xl md:max-w-[420px] my-5 ">
-            Submit your grievances regarding exam postponements, recruitment
-            irregularities, and more.
+          <p className="text-gray-400 text-lg md:text-xl my-6 leading-relaxed">
+            Submit your grievances regarding exam postponements, recruitment irregularities, paper leaks, and other concerns.
           </p>
           <a
             href="/submitGrievance"
-            className="cursor-pointer bg-blue-500 rounded-md text-white px-5 p-3 font-medium mt-10 hover:"
+            className="inline-flex items-center justify-center cursor-pointer bg-blue-600 hover:bg-blue-500 text-white px-6 py-3.5 rounded-lg font-semibold text-lg shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30 transition-all duration-200 active:scale-95"
           >
             Submit a Grievance
           </a>
         </div>
       </main>
-      <div>
+      <div className="py-12">
         <GrievanceBoard />
       </div>
-      <div className="my-3 flex flex-col gap-5 border-b-2 border-gray-100">
-        <h3 className="text-3xl font-bold  text-center">How It Works</h3>
-        <div className="flex flex-col md:flex-row justify-evenly mx-10">
-          <div className="flex flex-col items-center gap-2">
-            <span className="bg-blue-600 w-[50px] h-[50px] rounded-full text-white flex justify-center items-center text-xl">
+      <div className="py-12 border-t border-white/10">
+        <h3 className="text-3xl font-bold text-center text-white mb-10">How It Works</h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="glass-card p-6 flex flex-col items-center text-center gap-4">
+            <span className="bg-blue-600/20 text-blue-400 border border-blue-500/30 w-12 h-12 rounded-full flex justify-center items-center text-xl font-bold">
               1
             </span>
-            <span className="text-xl font-semibold">Submit</span>
-            <p className="text-muted max-w-[250px] text-center">
-              Fill out the grievance form according to your issue
+            <span className="text-xl font-semibold text-white">Submit</span>
+            <p className="text-gray-400 text-sm">
+              Fill out the grievance form with precise details and documents regarding your issue.
             </p>
           </div>
-          <div className="flex flex-col items-center gap-2">
-            <span className="bg-blue-600 w-[50px] h-[50px] rounded-full text-white flex justify-center items-center text-xl">
+          <div className="glass-card p-6 flex flex-col items-center text-center gap-4">
+            <span className="bg-purple-600/20 text-purple-400 border border-purple-500/30 w-12 h-12 rounded-full flex justify-center items-center text-xl font-bold">
               2
             </span>
-            <span className="text-xl font-semibold">Review</span>
-            <p className="text-muted max-w-[250px] text-center">
-              After that your Feedback'll be examined at the Backend
+            <span className="text-xl font-semibold text-white">Review</span>
+            <p className="text-gray-400 text-sm">
+              Your feedback is audited by the administration to evaluate validity and claim.
             </p>
           </div>
-          <div className="flex flex-col items-center gap-2">
-            <span className="bg-blue-600 w-[50px] h-[50px] rounded-full text-white flex justify-center items-center text-xl">
+          <div className="glass-card p-6 flex flex-col items-center text-center gap-4">
+            <span className="bg-emerald-600/20 text-emerald-400 border border-emerald-500/30 w-12 h-12 rounded-full flex justify-center items-center text-xl font-bold">
               3
             </span>
-            <span className="text-xl font-semibold">Display</span>
-            <p className="text-muted max-w-[250px] text-center">
-              If the feedback is genuine and is written in modest language, It
-              may be Displayed on the Site.
+            <span className="text-xl font-semibold text-white">Display</span>
+            <p className="text-gray-400 text-sm">
+              Genuine issues meeting submission rules are broadcasted publicly for community tracking.
             </p>
           </div>
         </div>

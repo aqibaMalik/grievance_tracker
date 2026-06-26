@@ -1,0 +1,8 @@
+{
+  "name": "grievance-tracker-root",
+  "version": "1.0.0",
+  "description": "Root workspace runner for JK Grievance Tracker",
+  "scripts": {
+    "dev": "npx concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\""
+  }
+}
